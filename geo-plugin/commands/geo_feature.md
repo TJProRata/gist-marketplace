@@ -8,7 +8,7 @@ Create a plan in `specs/*.md` to implement the `Feature` using the `Plan Format`
 ## Instructions
 
 - Research the codebase to understand existing patterns before planning
-- Use CVA variants for any new components (see `components/ui/button.tsx`)
+- Use CVA variants for any new components (see `apps/web/components/ui/button.tsx`)
 - Follow existing file organization conventions
 - Create the plan in `specs/<feature-name>.md`
 - Replace all `<placeholder>` values with specific details
@@ -18,26 +18,29 @@ Create a plan in `specs/*.md` to implement the `Feature` using the `Plan Format`
 
 Focus on these directories based on feature type:
 
-**Frontend Features:**a
+**Frontend Features (apps/web/):**
 
 - `app/` - Next.js routes and pages
-- `components/` - React components (ui/, shared/, dashboard/, ask-gist/)
-- `hooks/` - Custom React hooks
+- `components/` - React components (ui/, shared/, dashboard/, ask-gist/, onboarding/)
+- `hooks/` - Custom React hooks (use-chat-stream, use-content-flow, etc.)
 - `lib/` - Utilities, state management, mock data
+- `types/` - TypeScript definitions
 
-**Backend Features:**
+**Backend Features (apps/web/):**
 
-- `convex/schema.ts` - Database schema
+- `convex/schema.ts` - Database schema (10+ tables)
 - `convex/*.ts` - Mutations and queries
 
-**Styling:**
+**AI Features (packages/ai/):**
+
+- `agents/` - AI agents with agent-critic pattern
+- `agent-architectures/` - Reusable patterns
+- `engines/` - Data fetching (AI Overview)
+
+**Styling (apps/web/):**
 
 - `app/globals.css` - Global styles, CSS variables
-- `tailwind.config.ts` - Tailwind configuration
-
-**Types:**
-
-- `types/` - TypeScript definitions
+- shadcn/ui components in `components/ui/`
 
 ## Plan Format
 
@@ -105,9 +108,10 @@ So that <benefit>
 ## Validation Commands
 
 ```bash
-bun run build          # Verify no build errors
-bun run lint           # Check for lint issues
-bunx convex dev        # Test Convex functions (if backend changes)
+bun run build                    # Build all workspaces
+bun run lint                     # Lint all workspaces
+cd apps/web && bunx convex dev   # Test Convex functions (if backend changes)
+cd apps/web && bun run test      # Run tests
 ```
 ````
 

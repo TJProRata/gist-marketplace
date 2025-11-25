@@ -33,8 +33,9 @@ Commands for the Gist GEO project workflow.
 | Command | Description |
 |---------|-------------|
 | `/hello` | Greet the user with a personalized message |
-| `/geo_prime` | Quick project state check |
-| `/geo_prime_askgist` | Context for Ask Gist AI chat |
+| `/geo_prime` | Quick project state check for Gist GEO monorepo |
+| `/geo_prime_ai` | Context for AI package and agent development |
+| `/geo_prime_askgist` | Context for Ask Gist AI chat interface |
 | `/geo_prime_backend` | Context for Convex backend work |
 | `/geo_prime_component` | Context for creating shadcn-style components |
 | `/geo_prime_dashboard` | Context for dashboard pages and features |
@@ -44,9 +45,9 @@ Commands for the Gist GEO project workflow.
 | `/geo_commit` | Create a commit with conventional commit format |
 | `/geo_feature` | Create a feature plan in specs/*.md |
 | `/geo_generate_branch_name` | Create a new branch from main |
-| `/geo_install` | Install and setup project |
+| `/geo_install` | Install and setup Gist GEO monorepo |
 | `/geo_pull_request` | Push branch and create PR to main |
-| `/geo_start` | Start dev servers |
+| `/geo_start` | Start Gist GEO dev servers |
 
 ## Managing the Plugin
 

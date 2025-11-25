@@ -16,21 +16,27 @@ Create a plan in `specs/*.md` to resolve the `Bug` using the `Plan Format` below
 
 Focus on these directories based on bug location:
 
-**Frontend Bugs:**
+**Frontend Bugs (apps/web/):**
 
 - `app/` - Next.js routes and pages
-- `components/` - React components
+- `components/` - React components (dashboard/, onboarding/, ask-gist/, ui/)
 - `hooks/` - Custom hooks
 - `lib/` - Utilities and state
+- `types/` - TypeScript definitions
 
-**Backend Bugs:**
+**Backend Bugs (apps/web/):**
 
 - `convex/` - Database schema and functions
 
-**Styling Bugs:**
+**AI Bugs (packages/ai/):**
+
+- `agents/` - AI agent implementations
+- `engines/` - Data fetching engines
+
+**Styling Bugs (apps/web/):**
 
 - `app/globals.css` - Global styles
-- `tailwind.config.ts` - Tailwind config
+- `components/ui/` - shadcn components
 
 ## Plan Format
 
@@ -76,8 +82,9 @@ Focus on these directories based on bug location:
 ## Validation Commands
 
 ```bash
-bun run build          # Verify no build errors
-bun run lint           # Check for lint issues
+bun run build                    # Build all workspaces
+bun run lint                     # Lint all workspaces
+cd apps/web && bun run test      # Run tests
 # Manual: <steps to verify the fix>
 ```
 ````

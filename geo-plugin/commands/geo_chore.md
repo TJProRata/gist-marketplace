@@ -16,26 +16,33 @@ Create a plan in `specs/*.md` to resolve the `Chore` using the `Plan Format` bel
 
 Focus on these directories based on chore type:
 
-**Code Cleanup / Refactoring:**
+**Code Cleanup / Refactoring (apps/web/):**
 
-- `components/` - React components
+- `components/` - React components (dashboard/, onboarding/, ask-gist/, ui/)
 - `lib/` - Utilities and state
 - `hooks/` - Custom hooks
+- `types/` - TypeScript definitions
+
+**AI Package Cleanup (packages/ai/):**
+
+- `agents/` - AI agents
+- `agent-architectures/` - Patterns
+- `engines/` - Data fetching
 
 **Configuration / Tooling:**
 
-- `package.json` - Dependencies and scripts
-- `tsconfig.json` - TypeScript config
-- `tailwind.config.ts` - Tailwind config
-- `vercel.json` - Deployment config
+- `package.json` - Root workspace + catalog dependencies
+- `apps/web/package.json` - Web app dependencies
+- `packages/ai/package.json` - AI package dependencies
+- `tsconfig.json` - Root TypeScript config
+- `apps/web/tsconfig.json` - Web app TypeScript config
 
 **Documentation:**
 
 - `README.md` - Project overview
-- `doc/` - Project documentation
-- `docs/` - Technical documentation
+- `CLAUDE.md` - Comprehensive project documentation
 
-**Backend:**
+**Backend (apps/web/):**
 
 - `convex/` - Database schema and functions
 
@@ -75,8 +82,9 @@ Focus on these directories based on chore type:
 ## Validation Commands
 
 ```bash
-bun run build          # Verify no build errors
-bun run lint           # Check for lint issues
+bun run build                    # Build all workspaces
+bun run lint                     # Lint all workspaces
+cd apps/web && bun run test      # Run tests (if applicable)
 ```
 ````
 

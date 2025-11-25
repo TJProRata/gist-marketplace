@@ -8,19 +8,49 @@ description: Context for dashboard pages and features
 
 ```bash
 git status --short
-ls -1 components/dashboard/
+ls apps/web/app/dashboard/
+ls apps/web/components/dashboard/ | head -20
 ```
 
 ## Read
-- docs/dashboard_building_protocol.md
-- docs/gist_geo/gist_geo_style_guide.md
-- app/dashboard/layout.tsx
-- app/dashboard/page.tsx
-- lib/dashboard-state.ts
+- apps/web/app/dashboard/layout.tsx
+- apps/web/app/dashboard/page.tsx
+- apps/web/components/dashboard/dashboard-client.tsx
+- apps/web/lib/dashboard-state.ts
 
-## Key Patterns
-- Sidebar state persisted to localStorage
-- Navigation: overview, agent-analytics, content, brands, products, insights
-- Layout: Sidebar + main content area with mobile hamburger menu
+## Dashboard Routes
+
+```
+apps/web/app/dashboard/
+├── layout.tsx          # Dashboard layout with sidebar
+├── page.tsx            # Main dashboard (DashboardClient)
+├── loading.tsx         # Loading state
+├── analytics/          # Analytics page
+├── brands/             # Brand management
+├── content/            # Content management
+├── insights/           # Insights page
+└── products/           # Product management
+```
+
+## Key Components (43 total)
+
+| Component | Purpose |
+|-----------|---------|
+| dashboard-client.tsx | Main dashboard container |
+| dashboard-grid.tsx | Grid layout |
+| dashboard-header.tsx | Header with actions |
+| sidebar.tsx | Navigation sidebar |
+| brand-selector.tsx | Brand picker |
+| action-item.tsx | Action cards |
+| metrics-panel.tsx | Metrics display |
+
+## State Management
+- `lib/dashboard-state.ts` - Sidebar state (localStorage)
+- Navigation: overview, analytics, content, brands, products, insights
+- Layout: Collapsible sidebar + main content area
+- Mobile: Hamburger menu with sheet overlay
+
+## Related Types
+- `apps/web/types/dashboard.types.ts` - Dashboard type definitions
 
 ARGUMENTS: $ARGUMENTS
