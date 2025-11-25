@@ -1,0 +1,10 @@
+# Logs
+logs/
+**/logs/
+
+# Claude data
+.claude/data/
+**/.claude/data/
+
+# OS files
+.DS_Store

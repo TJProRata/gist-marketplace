@@ -1,0 +1,8 @@
+{
+"name": "geo-plugin",
+"description": "plugin with commands that are for geo",
+"version": "1.0.0",
+"author": {
+"name": "TJ McGovern"
+}
+}

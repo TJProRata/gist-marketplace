@@ -1,0 +1,30 @@
+{
+  "name": "gist-marketplace",
+  "owner": {
+    "name": "TJ McGovern"
+  },
+  "plugins": [
+    {
+      "name": "geo-plugin",
+      "source": "./geo-plugin",
+      "description": "Plugin for gist geo project",
+      "commands": [
+        { "name": "hello", "description": "Greet the user with a personalized message" },
+        { "name": "geo_prime", "description": "Quick project state check" },
+        { "name": "geo_prime_askgist", "description": "Context for Ask Gist AI chat" },
+        { "name": "geo_prime_backend", "description": "Context for Convex backend work" },
+        { "name": "geo_prime_component", "description": "Context for creating shadcn-style components" },
+        { "name": "geo_prime_dashboard", "description": "Context for dashboard pages and features" },
+        { "name": "geo_prime_onboarding", "description": "Context for onboarding flow work" },
+        { "name": "geo_bug", "description": "Create a bug fix plan in specs/*.md" },
+        { "name": "geo_chore", "description": "Create a chore plan in specs/*.md" },
+        { "name": "geo_commit", "description": "Create a commit with conventional commit format" },
+        { "name": "geo_feature", "description": "Create a feature plan in specs/*.md" },
+        { "name": "geo_generate_branch_name", "description": "Create a new branch from main" },
+        { "name": "geo_install", "description": "Install and setup project" },
+        { "name": "geo_pull_request", "description": "Push branch and create PR to main" },
+        { "name": "geo_start", "description": "Start dev servers" }
+      ]
+    }
+  ]
+}
