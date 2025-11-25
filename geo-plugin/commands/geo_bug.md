@@ -1,3 +1,6 @@
+---
+description: Create a bug fix plan in specs/*.md
+---
 # Bug Planning
 
 Create a plan in `specs/*.md` to resolve the `Bug` using the `Plan Format` below.

@@ -1,3 +1,6 @@
+---
+description: Create a feature plan in specs/*.md
+---
 # Feature Planning
 
 Create a plan in `specs/*.md` to implement the `Feature` using the `Plan Format` below.

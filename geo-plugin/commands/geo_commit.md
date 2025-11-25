@@ -1,3 +1,6 @@
+---
+description: Create a commit with conventional commit format
+---
 # Git Commit
 
 Create a commit with conventional commit format.

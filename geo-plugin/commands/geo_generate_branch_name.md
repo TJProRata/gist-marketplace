@@ -1,3 +1,6 @@
+---
+description: Create a new branch from main
+---
 # Create Feature Branch
 
 Create a new branch from main for the given feature/fix.

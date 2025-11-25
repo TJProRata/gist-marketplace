@@ -1,3 +1,6 @@
+---
+description: Create a chore plan in specs/*.md
+---
 # Chore Planning
 
 Create a plan in `specs/*.md` to resolve the `Chore` using the `Plan Format` below.

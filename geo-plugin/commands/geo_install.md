@@ -1,3 +1,6 @@
+---
+description: Install and setup project
+---
 # Install & Setup
 
 ## Read
